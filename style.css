@@ -1,0 +1,463 @@
+body { 
+  background: url(Intro7.png) no-repeat; 
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 40px 0;
+  border: 0;
+}
+
+
+/* Page */
+.page {
+  overflow: hidden;
+}
+
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+}
+
+/* Container1 */
+.container1 {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 90px;
+  margin: 0 auto;
+}
+
+
+
+
+/* Header */
+.header {
+  width: 100%;
+  padding-top: 30px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header.fixed {
+  padding: 10px 0;
+
+  background: url("intro2.png") center no-repeat;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  transform: translate3d(0, 0, 0);
+}
+
+.header.active {
+  background: url("intro2.png") center no-repeat;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0bc78b;
+}
+
+
+/* Nav */
+.nav {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  position: relative;
+
+  color: #fff;
+  text-decoration: none;
+
+  transition: color .1s linear;
+}
+
+.nav__link:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+
+ 
+  opacity: 0;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+
+  transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+  color: #0bc78b;
+}
+
+.nav__link:hover:after{
+  opacity: 1;
+}
+
+
+/* Nav toggle */
+.nav-toggle {
+  width: 30px;
+  padding: 10px 0;
+  display: none;
+
+  font-size: 0;
+  color: transparent;
+
+  border: 0;
+  background: none;
+  cursor: pointer;
+
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+}
+
+.nav-toggle:focus {
+  outline: 0;
+}
+
+.nav-toggle__item {
+  display: block;
+  width: 100%;
+  height: 3px;
+
+  background-color: #fff;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  transition: background .2s linear;
+}
+
+.nav-toggle.active .nav-toggle__item {
+  background: none;
+}
+
+.nav-toggle__item:before,
+.nav-toggle__item:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+
+  background-color: #fff;
+
+  position: absolute;
+  left: 0;
+  z-index: 1;
+
+  transition: transform .2s linear;
+}
+
+.nav-toggle__item:before {
+  top: -8px;
+}
+
+.nav-toggle__item:after {
+  bottom: -8px;
+}
+
+.nav-toggle.active .nav-toggle__item:before {
+  transform-origin: left top;
+  transform: rotate(45deg) translate3d(0px, -2px, 0)
+}
+
+.nav-toggle.active .nav-toggle__item:after {
+  transform-origin: left bottom;
+  transform: rotate(-45deg) translate3d(0px, 3px, 0);
+}
+
+
+/* Intro */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 820px;
+  position: relative;
+
+ 
+  -webkit-background-size: cover;
+  background-size: cover;
+  font-weight: bold;
+}
+
+
+.intro__inner {
+  width: 100%;
+  max-width: 880px;
+  margin: left;
+
+  text-align: left;
+}
+
+.intro__title {
+  color: #0bc78b;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+  font-size: 39px;
+ 
+}
+
+.intro__title2 {
+  color: #858585;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+  font-size: 15px;
+}
+
+.intro__title3 {
+  color: #0bc78b;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+  font-size: 39px;
+
+}
+
+
+.intro__title4 {
+  color: #858585;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+  font-size: 15px;
+}
+
+.intro__title5 {
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+  margin-top: -84%;
+}
+
+.intro__title6 {
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+  margin-top: -34%;
+}
+
+.intro__title7 {
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+  margin-top: 9%;
+}
+
+.intro__title8 {
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+}
+
+.intro__title9 {
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+}
+
+.intro__title10 {
+  color: #0bc78b;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+  font-size: 39px;
+}
+
+.intro__title11 {
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px;
+  font-size: 39px;
+  padding-right: 153px;
+}
+
+
+/* Button */
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 30px;
+
+  border: 3px solid #0bc78b;
+  border-radius: 22px;
+  background-color: #0bc78b;
+  
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+
+  transition: background .1s linear, color .1s linear;
+}
+
+.btn:hover {
+  background-color: #0aa171;
+  color: rgb(255, 255, 255);
+  border: 3px solid #0aa171;
+}
+
+
+.btn1 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 30px;
+
+  border: 3px solid #0bc78b;
+  border-radius: 22px;
+  background-color: #0bc78b;
+  
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-right: 56px; /* Отступ справа */
+  margin-bottom: 10px; /* Отступ снизу */
+
+  transition: background .1s linear, color .1s linear;
+}
+
+.btn1:hover {
+  background-color: #0aa171;
+  color: rgb(255, 255, 255);
+  border: 3px solid #0aa171;
+}
+
+/* link */
+.link{
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 30px;
+
+  
+  font-size: 14px;
+  font-weight: 700;
+  color: #0bc78b;
+  text-decoration: none;
+  margin-top: 21px;
+  
+
+  transition: background .1s linear, color .1s linear;
+
+}
+
+
+/* Section */
+.section{
+  float: right;
+  padding-top: 287px;
+  padding-left: 10px;
+  padding-right: 230px;
+}
+
+.section2 {
+  float: right;
+  padding-right: 139px;
+  padding-top: 0%;
+  padding-left: 16%;
+}
+
+.section3 {
+  float: right;
+}
+
+.section4 {
+  float: left;
+  padding-top: 38.5%;
+  padding-left: 7%;
+}
+
+.section5 {
+  float: left;
+  padding-top: 18%;
+  padding-left: 7%;
+}
+
+.section6 {
+  float: right;
+  padding-top: 9%;
+}
+
+/*MARKER*/
+.thumb img  {
+  margin-right: 38px; /* Отступ справа */
+  margin-bottom: 10px; /* Отступ снизу */
+ }
+
+/*AVTOR_GOSHA*/
+.AVTOR_GOSHA{
+  padding-left: 46%;
+}
+
+
+
+
+
+
+
+
+
+
+
