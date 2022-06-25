@@ -111,6 +111,8 @@ hr {
   text-decoration: none;
 
   transition: color .1s linear;
+  color: #0bc78b;
+  background: url("intro2.png") center no-repeat;
 }
 
 .nav__link:after {
